@@ -24,11 +24,46 @@ a {
   background-color: #fff;
 }
 
-.button-logo:hover,
-.button-logo:active {
-  box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+.main-header {
+  background-color: #f4f7f9;
+}
+
+.main-header ul {
+  list-style: none;
+}
+
+.search-panel {
+  background-color: #293449;
+
+  display: flex;
+}
+
+
+/* Логотип */
+.header-logo {
+  width: 220px;
+  height: 47px;
+  background-color: #ee3643;
+  box-shadow: 0 5px 0 0 darkred;
+
+  margin-right: 17px;
+  margin-left: 130px;
+
+}
+
+.header-logo img {
+  position: relative;
+  top: 13px;
+}
+
+.header-logo:active {
+  background-color: #ba2732;
+}
+
+.header-logo:hover{
   background-color: #ca2c37;
 }
+
 
 /* кнопки закладок, корзины */
 .button-cart,
@@ -81,11 +116,65 @@ a {
 }
 
 
+
+
+/* Текст на главной странице, номер телефона*/
+
+.text-tel-logo {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.text-tel-logo p{
+  color: #ee3643;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 23px;
+
+  margin-left: 183px;
+  margin-top: 46px;
+}
+
+.tel-address span{
+  display: block;
+}
+
+.tel-company {
+  width: 270px;
+  text-align: center;
+  padding: 8px;
+
+  font-size: 21px;
+  color: #ee3643;
+
+  border: 2px solid #fff;
+}
+
+.tel-company img {
+  padding-right: 40px;
+}
+
+.address-company {
+  color: #32425c;
+  font-size: 14px;
+  line-height: 24px;
+  font-style: normal;
+  }
+
 /* кнопка входа и регистрации */
 .button-login {
   font-size: 21px;
-  background-color: #fff;
+  line-height: 21px;
   color: #000;
+
+  margin-right: 10px;
+  margin-top: 46px;
+  padding-right: 25px;
+  padding-left: 25px;
+  padding-top: 12px;
+
+  max-height: 33px;
 }
 
 .button-login:hover {
@@ -96,48 +185,11 @@ a {
   color: #f1f5f7;
 }
 
-.main-header {
-  background-color: #f4f7f9;
+.button-login img {
+  margin-right: 14px;
 }
 
-.main-header ul {
-  list-style: none;
-}
 
-.search-panel {
-  background-color: #293449;
-}
-
-.header-logo {
-  width: 220px;
-  height: 47px;
-  background-color: #ee3643;
-  box-shadow: 0 5px 0 0 darkred;
-}
-
-.header-logo:active {
-  box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
-  background-color: #ba2732;
-}
-
-.text-intro{
-  color: #ee3643;
-  font-style: italic;
-  font-size: 16px;
-  line-height: 23px;
-}
-
-.tel-company {
-  padding: 10px;
-  font-size: 21px;
-  color: #ee3643;
-  border: 2px solid #fff;
-}
-
-.tel-company img {
-  padding-right: 40px;
-
-}
 
 /* навигация */
 .site-navigation {
@@ -150,6 +202,8 @@ a {
   background-color: #32425c;
   box-shadow: 0 5px 0 0 #293449;
   font-size: 17px;
+
+  margin-left: 130px;
 }
 
 .navigation ul {
@@ -177,10 +231,26 @@ a {
   opacity: 0.2;
 }
 
+
+/* "Хлебные крошки" */
+.breadcrumb {
+  display: flex;
+  justify-content: space-between;
+  width: 358px;
+  margin-left: 130px;
+}
+
+ul.breadcrumb {
+  padding: 0;
+}
+
 .breadcrumb li{
   list-style: none;
+
   text-transform: uppercase;
   font-size: 13px;
+  font-family: 'PTSans', sans-serif;
+  line-height: 18px;
 }
 
 .breadcrumb a {
@@ -267,11 +337,16 @@ a {
   margin-left: 30px;
 }
 
+section.items {
+  margin: 0;
+  padding: 0;
+}
+
 .items {
   display: flex;
   flex-wrap: nowrap;
   width: 940px;
-  margin-left: 130px;
+  text-align: center;
 }
 
 .popular-items-button {
@@ -315,15 +390,12 @@ a {
   border: 1px solid #eaeaea;
   margin-top: 20px;
   margin-bottom: 20px;
-   justify-content: center;
+  justify-content: center;
   align-items: center;
 }
 
 
 /* Сервисы */
-
-/* в меню вылезает какой-то паддинг левый. не могу понять откуда и что это такое. */
-
 .services {
   width: 1200px;
   background-color: #f4f7f9;
@@ -343,17 +415,23 @@ a {
   color: #32425c;
 }
 
+ul.service-navigation {
+  padding-left: 0;
+}
+
 .service-navigation {
   list-style: none;
-  width: 240px;
+  min-width: 240px;
   height: 183px;
   background-color: #32425c;
   margin-left: 130px;
+
 }
 
 .service-navigation li {
     padding-top: 16px;
     padding-bottom: 15px;
+    padding-left: 23px;
 }
 
 .service-navigation a{
@@ -425,18 +503,57 @@ li.active-white {
 
 .filters-items {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
-.producer {
+.producers {
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
 }
 
 .filters-by {
+  margin-left: 130px;
+  width: 220px;
+  display: flex;
+  flex-wrap: wrap;
   font-size: 15px;
   line-height: 20px;
   vertical-align: middle;
+}
+
+.filters-by-made {
+  padding:0;
+  margin: 0;
+  text-align: left;
+  border: none;
+  max-height: 250px;
+}
+
+.powers {
+    font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+ul.radio {
+  padding: 0;
+}
+
+.filters-by-power {
+  border: none;
+  padding:0;
+  margin: 0;
+
+  text-align: left;
+}
+
+.divider {
+  width: 220px;
+  height: 1px;
+}
+
+ul.checkbox {
+  padding: 0;
 }
 
 .checkbox li,
