@@ -11,7 +11,7 @@
   <body>
     <header class="main-header">
       <div class="search-panel">
-        <a class="header-logo button button-logo" href="index.html">
+        <a class="header-logo button" href="index.html">
           <img src="img/logo-technomart.svg" width="110" height="20" alt="Логотип «Техномарта»">
         </a>
         <form class="search-form" action="" method="get">
@@ -23,20 +23,19 @@
         <a class="button button-cart" href="#"><img src="img/icon-cart.svg" width="15" height="15" alt="корзина">Корзина</a>
         <button class="button button-order" type="submit">Оформить заказ</button>
       </div>
-          <p class="text-intro">
-            Интернет-магазин<br>
+      <div class="text-tel-logo">
+          <p>Интернет-магазин<br>
             строительных материалов<br>
-            и инструментов для ремонта
-          </p>
-          <p>
-            <span class="tel-company"><img src="img/icon-phone.svg" width="20" height="20" alt="телефон">+7 (812) 555-05-55</span>
-            <span class="address-company">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
-          </p>
-            <ul>
-                <li><img src="img/icon-login.svg" width="20" height="17" alt="логин"><a class="button button-login" href="#">Войти</a></li>
-                <li><a href="#" class="button button-login">Регистрация</a></li>
-            </ul>
-
+            и инструментов для ремонта</p>
+          <div class="tel-address">
+            <p>
+              <span class="tel-company"><img src="img/icon-phone.svg" width="20" height="20" alt="телефон">+7 (812) 555-05-55</span>
+              <span class="address-company">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
+            </p>
+          </div>
+                <a class="button button-login" href="#"><img src="img/icon-login.svg" width="20" height="17" alt="логин">Войти</a></li>
+                <a href="#" class="button button-login">Регистрация</a></li>
+      </div>
         <nav class="navigation">
             <ul>
                 <li><a href="index.html">Главная</a></li>
@@ -54,8 +53,11 @@
         <h1 class="visually-hidden">«Техномарт»</h1>
           <ul class="breadcrumb">
             <li><a href="index.html"><img src="img/icon-home.svg" width="14" height="12" alt="главная страница"></a></li>
+            <img src="img/icon-right-small.svg" width="8" height="12" alt="стрелка вправо">
             <li><a href="catalog.html">Каталог</a></li>
+            <img src="img/icon-right-small.svg" width="8" height="12" alt="стрелка вправо">
             <li><a href="instrument.html">Инструмент</a></li>
+            <img src="img/icon-right-small.svg" width="8" height="12" alt="стрелка вправо">
             <li>Перфораторы</li>
           </ul>
           <p class="text-content">Перфораторы</p>
@@ -77,11 +79,11 @@
               <a class="sort-up-down" href="#"><img class="sort-up-down" src="img/icon-down-dir.svg" width="10" height="10" alt="сортировать по убыванию"></a>
           </fieldset>
         </div>
-
+        <div class="divider"> </div>
         <div class="filters-items">
         <div class="filters-by">
           <fieldset class="filters-by-made">
-            <legend class="producer">Производители:</legend>
+            <legend class="producers">Производители:</legend>
             <ul class="checkbox">
               <li>
                 <img src="img/checkbox-on.svg">
@@ -110,9 +112,9 @@
               </li>
             </ul>
           </fieldset>
-
+            <div class="divider"> </div>
           <fieldset class="filters-by-power">
-            <legend>Питание:</legend>
+            <legend class="powers">Питание:</legend>
             <ul class="radio">
               <li class="radio-on">
 <!--                 <img src="img/radio-on.svg"> -->
