@@ -258,10 +258,6 @@ ul.breadcrumb {
 }
 
 .text-content {
-  text-transform: uppercase;
-  font-size: 30px;
-  line-height: 30px;
-  color: #32425c;
   background-color: #f2f6f8;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -331,9 +327,6 @@ ul.breadcrumb {
 }
 
 .popular-items {
-  font-size: 30px;
-  line-height: 30px;
-  text-transform: uppercase;
   margin-left: 30px;
 }
 
@@ -403,12 +396,17 @@ section.items {
   line-height: 24px;
   font-family: PTSans, sans-serif;
 }
+.services h3,
+.text-margin {
+    margin-left: 130px;
+}
 
-.services h3 {
+.services h4 {
   text-transform: uppercase;
   font-family: 'Cuprum', sans-serif;
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: lighter;
 }
 
 .navigation-discription h3{
@@ -640,6 +638,8 @@ input[type="radio"] {
 
   display: flex;
   flex-wrap: wrap;
+
+  margin-left: 130px;
 }
 
 .item {
@@ -672,9 +672,12 @@ input[type="radio"] {
   height: 38px;
   box-shadow: inset 0px -3px 0 0 #367315;
   background-color: #63a63e;
+
   position: absolute;
   top: 44px;
   right: 42px;
+
+  color: #fff;
 }
 
 .button-to-bookmark {
@@ -684,6 +687,7 @@ input[type="radio"] {
   position: absolute;
   top: 90px;
   right: 42px;
+  color: #32425c;
 }
 
 .button-buy,
@@ -757,12 +761,14 @@ input[type="radio"] {
   padding: 67px 132px 73px 130px;
 }
 
-.text-perforator h2 {
+.heading {
+  font-family: 'Cuprum', sans-serif;
   text-transform: uppercase;
   font-size: 30px;
   line-height: 30px;
   text-align: left;
   font-weight: normal;
+  color: #32425c;
 }
 
 .text-perforator p{
@@ -773,11 +779,12 @@ input[type="radio"] {
 
 
 /* О компании и карта */
+
 .type-delivery li {
   list-style: none;
   font-weight: bold;
   font-size: 18px;
-  line-height: 20px;
+  line-height: 1.6;
 }
 
 .type-delivery li:before {
@@ -787,35 +794,40 @@ input[type="radio"] {
     color: #ee3643;
 }
 
+
 .company {
-  width: 940px;
   display: flex;
   flex-wrap: nowrap;
+  justify-content: flex-start;
 }
 
-.company p{
+.company div.p{
   font-family: 'PTSans', sans-serif;
 }
 
 .about-company {
-  width: 940px;
-  margin-left: -80px;
+  display: block;
+
+  width: 519px;
+
   font-size: 13px;
   line-height: 24px;
+
+  margin-left: -90px;
+  margin-right: 121px;
 }
 
-.about-company h3{
-  text-transform: uppercase;
-  font-size: 30px;
-  line-height: 30px;
-  font-weight: normal;
+.map {
+  width: 300px;
 }
+
 
 .button-company,
 .button-write-us {
   background-color: #ee3643;
   color: #fff;
   height: 38px;
+  margin-bottom: 86px;
 }
 
 .button-company {
@@ -824,13 +836,6 @@ input[type="radio"] {
 
 .button-write-us {
   width: 300px;
-}
-
-.map h3{
-  text-transform: uppercase;
-  font-size: 30px;
-  line-height: 30px;
-  font-weight: normal;
 }
 
 /* попап добавление в корзину */
@@ -924,6 +929,21 @@ li.active {
   color: #f1f5f7;
   font-size: 18px;
   line-height: 24px;
+
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.logo-and-adress {
+  margin-left: 130px;
+  display: block;
+  min-width: 325px;
+}
+
+.navigation-footer {
+  display: flex;
+  flex-wrap: wrap;
+
 }
 
 .navigation-footer ul {
@@ -937,14 +957,25 @@ li.active {
 
 .navigation-footer:active {
   opacity: 0.5;
+  text-decoration: none;
+}
+
+.white-navigation {
+  display: inline-flex;
+}
+
+.yellow-navigation {
+  display: inline-flex;
 }
 
 .white-navigation a {
   color: #fff;
+  padding-left: 60px;
 }
 
 .yellow-navigation a {
   color: #ffd180;
+  padding-left: 60px;
 }
 
 .mail-address {
@@ -962,26 +993,47 @@ li.active {
   align-content: space-between;
 }
 
-.social-networks ul {
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-.social-networks li {
+.button-social {
   background-color: #212a3a;
+
   border-radius: 50%;
-  list-style: none;
-  width: 42px;
-  height: 42px;
-  margin-right: 3px;
+
+/*   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-self: center; */
 }
 
-.social-networks img {
+.social-networks {
   text-align: center;
-  vertical-align: middle;
 }
 
-.
+.social-networks  li{
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+    width: 42px;
+  height: 42px;
+  list-style: none;
+}
+
+
+.copyright {
+  display: flex;
+
+  margin-left: 130px;
+}
+
+
+.feedback,
+.develop {
+  display: block;
+}
+
+
 .modal-close,
 .button-red {
   background-color: #ee3643;
