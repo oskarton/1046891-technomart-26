@@ -995,7 +995,8 @@ li.active {
 
 .button-social {
   background-color: #212a3a;
-
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
 
 /*   display: flex;
@@ -1015,8 +1016,7 @@ li.active {
   justify-content: center;
   align-items: center;
   width: 50px;
-    width: 42px;
-  height: 42px;
+
   list-style: none;
 }
 
