@@ -10,20 +10,23 @@
 
   <body>
     <header class="main-header">
-      <div class="search-panel">
+
+      <div class="all-search-panel">
+        <div class="wrapper search-panel">
         <a class="header-logo button" href="index.html">
           <img src="img/logo-technomart.svg" width="110" height="20" alt="Логотип «Техномарта»">
         </a>
         <form class="search-form" action="" method="get">
+          <label class="visually-hidden" for="search">Поиск</label>
           <img src="img/icon-search.svg" width="17" height="17" alt="Поиск">
-          <label  class="visually-hidden" for="search">Поиск</label>
           <input class="button-search" id="search" type="text" name="search" placeholder="Поиск:">
         </form>
-        <a class="button button-bookmark" href="#"><img src="img/icon-bookmark.svg" width="14" height="16" alt="флажок закладки">Закладки</a>
-        <a class="button button-cart" href="#"><img src="img/icon-cart.svg" width="15" height="15" alt="корзина">Корзина</a>
+        <a class="button button-bookmark" href="#"><img src="img/icon-bookmark.svg" width="14" height="16" alt="флажок закладки"><span>Закладки: 0</span></a>
+        <a class="button button-cart-red" href="#"><img src="img/icon-cart.svg" width="15" height="15" alt="корзина"><span>Корзина: 10</span></a>
         <button class="button button-order" type="submit">Оформить заказ</button>
       </div>
-      <div class="text-tel-logo">
+      </div>
+      <div class="text-tel-logo wrapper">
           <p>Интернет-магазин<br>
             строительных материалов<br>
             и инструментов для ремонта</p>
@@ -33,10 +36,13 @@
               <span class="address-company">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
             </p>
           </div>
-                <a class="button button-login" href="#"><img src="img/icon-login.svg" width="20" height="17" alt="логин">Войти</a></li>
-                <a href="#" class="button button-login">Регистрация</a></li>
+            <ul class="users-navigation">
+              <li><a class="button nickname" href="#">Равшан Джамшутович</a></li>
+               <li><a class="orders" href="#">Мои заказы</a></li>
+               <li><a class="orders account" href="">Личный кабинет</a></li>
+            </ul>
       </div>
-        <nav class="navigation">
+        <nav class="navigation wrapper">
             <ul>
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="company.html">Компания</a></li>
@@ -49,7 +55,7 @@
         </nav>
     </header>
 
-    <main class="main-content">
+    <main class="main-content wrapper">
         <h1 class="visually-hidden">«Техномарт»</h1>
           <ul class="breadcrumb">
             <li><a href="index.html"><img src="img/icon-home.svg" width="14" height="12" alt="главная страница"></a></li>
@@ -60,76 +66,98 @@
             <img src="img/icon-right-small.svg" width="8" height="12" alt="стрелка вправо">
             <li>Перфораторы</li>
           </ul>
+
           <h3 class="heading text-content">Перфораторы</h3>
 
         <section class="filters">
           <div class="sort-filter">
-          <h2>Фильтр:</h2>
-          <fieldset>
-            <legend class="cost">Цена:</legend>
-            <input type="range" min="0" max="30000" step="1000" value="25000">
-            <p><span>0 </span>- <span> 30000</span></p>
-          </fieldset>
-          <fieldset class="filters-by-money">
-            <legend>Сортировка:</legend>
-              <a class="button sort-by" href="#">по цене</a>
-              <a class="button sort-by" href="#">по типу</a>
-              <a class="button sort-by" href="#">по функционалу</a>
-              <a class="sort-up-down" href="#"><img class="sort-up-down" src="img/icon-up-dir.svg" width="10" height="10" alt="сортировать по возрастанию"></a>
-              <a class="sort-up-down" href="#"><img class="sort-up-down" src="img/icon-down-dir.svg" width="10" height="10" alt="сортировать по убыванию"></a>
-          </fieldset>
-        </div>
-        <div class="divider"> </div>
-        <div class="filters-items">
-        <div class="filters-by">
-          <fieldset class="filters-by-made">
-            <legend class="producers">Производители:</legend>
-            <ul class="checkbox">
-              <li>
-                <img src="img/checkbox-on.svg">
-                <label for="bocsh">bocsh</label>
-                <input id="bocsh" type="checkbox" checked>
-              </li>
-              <li>
-                <img src="img/checkbox-off.svg">
-                <label for="интерскол">интерскол</label>
-                <input id="интерскол" type="checkbox">
-              </li>
-              <li>
-                <img src="img/checkbox-on.svg">
-                <label for="makita">makita</label>
-                <input id="makita" type="checkbox" checked>
-              </li>
-              <li>
-                <img src="img/checkbox-off.svg">
-                <label for="dewalt">dewalt</label>
-                <input id="dewalt" type="checkbox">
-              </li>
-              <li>
-                <img src="img/checkbox-off.svg">
-                <label for="hitachi">hitachi</label>
-                <input id="hitachi" type="checkbox">
-              </li>
-            </ul>
-          </fieldset>
-            <div class="divider"> </div>
-          <fieldset class="filters-by-power">
-            <legend class="powers">Питание:</legend>
-            <ul class="radio">
-              <li class="radio-on">
-<!--                 <img src="img/radio-on.svg"> -->
-                <label for="battery" class="radio"><img src="img/radio-on.svg">Аккумуляторные</label>
-                <input id="battery" type="radio" checked name="power">
-              </li>
-              <li>
-                <img src="img/radio-off.svg">
-                <label for="main-power" class="radio">Сетевые</label>
-                <input id="main-power" type="radio" name="power">
-              </li>
-            </ul>
-          </fieldset>
-            <button class="button button-show" type="button">Показать</button>
-        </div>
+            <div class="filter-sort-header">
+            <h2>Фильтр:</h2>
+            <fieldset class="filters-by-type">
+              <legend class="visually-hidden">Сортировка</legend>
+
+                <p>Сортировка:</p>
+                <div class="sort-by-by">
+                  <a class="button sort-by" href="#">по цене</a>
+                  <a class="button sort-by" href="#">по типу</a>
+                  <a class="button sort-by" href="#">по функционалу</a>
+
+                  <div class="sort-arrows">
+                    <a class="sort-up-down" href="#"><img class="sort-up-down" src="img/icon-up-dir.svg" width="10" height="10" alt="сортировать по возрастанию"></a>
+                    <a class="sort-up-down" href="#"><img class="sort-up-down" src="img/icon-down-dir.svg" width="10" height="10" alt="сортировать по убыванию"></a>
+                  </div>
+                </div>
+            </fieldset>
+            </div>
+          </div>
+          <div class="filters-items">
+            <div class="filter-part2">
+              <fieldset class="price">
+                <legend class="cost">Цена:</legend>
+                  <div class="filter-range">
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar"></div>
+                    </div>
+                      <div class="range-toggle range-toggle-min"></div>
+                      <div class="range-toggle range-toggle-max"></div>
+                    </div>
+                  <div class="price-controls">
+                    <label class="min-price"><input type="text" name="min-price" value="0"></label>
+                    <p>-</p>
+                    <label class="max-price"><input type="text" name="max-price" value="30000"></label>
+                  </div>
+              </fieldset>
+              <div class="filters-by">
+              <fieldset class="filters-by-made">
+                <legend class="producers">Производители:</legend>
+                <ul class="checkbox">
+                  <li>
+                    <img src="img/checkbox-on.svg">
+                    <label for="bocsh">bocsh</label>
+                    <input id="bocsh" type="checkbox" checked>
+                  </li>
+                  <li>
+                    <img src="img/checkbox-off.svg">
+                    <label for="интерскол">интерскол</label>
+                    <input id="интерскол" type="checkbox">
+                  </li>
+                  <li>
+                    <img src="img/checkbox-on.svg">
+                    <label for="makita">makita</label>
+                    <input id="makita" type="checkbox" checked>
+                  </li>
+                  <li>
+                    <img src="img/checkbox-off.svg">
+                    <label for="dewalt">dewalt</label>
+                    <input id="dewalt" type="checkbox">
+                  </li>
+                  <li>
+                    <img src="img/checkbox-off.svg">
+                    <label for="hitachi">hitachi</label>
+                    <input id="hitachi" type="checkbox">
+                  </li>
+                </ul>
+              </fieldset>
+                <div class="divider"> </div>
+              <fieldset class="filters-by-power">
+                <legend class="powers">Питание:</legend>
+                <ul class="radio">
+                  <li class="radio-on">
+    <!--                 <img src="img/radio-on.svg"> -->
+                    <label for="battery" class="radio"><img src="img/radio-on.svg">Аккумуляторные</label>
+                    <input id="battery" type="radio" checked name="power">
+                  </li>
+                  <li>
+                    <img src="img/radio-off.svg">
+                    <label for="main-power" class="radio">Сетевые</label>
+                    <input id="main-power" type="radio" name="power">
+                  </li>
+                </ul>
+              </fieldset>
+                <button class="button button-show" type="button">Показать</button>
+            </div>
+          </div>
 
 
           <section class="items">
@@ -296,27 +324,28 @@
             <li><a href="#">следующая</a></li>
           </ul>
       </section>
+
+    </main>
       <section class="text-perforator">
         <h2 class="visually-hidden">Пара слов о перфораторах</h2>
         <h3 class="heading">Пара слов о перфораторах</h3>
         <p>
-        Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
+        Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
         Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
         </p>
       </section>
-    </main>
-
     <footer class="main-footer">
       <div class="address-company-footer">
-        <div class="logo-and-adress">
-          <a class="footer-logo" href="index.html">
+        <div class="wrapper">
+          <div class="logo-and-adress">
+            <a class="footer-logo" href="index.html">
             <img src="img/logo-technomart.svg" width="140" height="20" alt="Логотип «Техномарта»">
-          </a>
-          <p>
-          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-          +7 (812) 555-05-55
-          </p>
-        </div>
+            </a>
+              <p>
+              г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+              +7 (812) 555-05-55
+              </p>
+          </div>
         <div class="navigation-footer">
             <ul class="white-navigation">
                 <li><a href="company.html">Компания</a></li>
@@ -333,26 +362,29 @@
             </ul>
         </div>
       </div>
-      <div class="copyright">
-        <p>
-          © 2010–2019 Компания «Техномарт»<br>
-          Все права защищены
-        </p>
-        <div>
-          <ul class="social-networks">
-            <li><a class="button-social" href="#"><span class="visually-hidden">Вконтакте</span><img src="img/icon-vk.svg" width="25" height="15" alt="Логотип vk"></a></li>
-            <li><a class="button-social" href="#"><span class="visually-hidden">Facebook</span><img src="img/icon-fb.svg" width="12" height="22" alt="Логотип fb"></a></li>
-            <li><a class="button-social" href="#"><span class="visually-hidden">Instagram</span><img src="img/icon-insta.svg" width="21" height="21" alt="Логотип inst"></a></li>
-          </ul>
-        </div>
-        <div class="feedback">
-          <p>Обратная связь:</p>
-          <p class="mail-address">mail@htmlacademy.ru</p>
-        </div>
-        <div class="develop">
-          <p>Разработано:</p>
-          <a class="mail-address" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
-        </div>
+      </div>
+        <div class="copyright wrapper">
+          <p>
+            © 2010–2019 Компания «Техномарт»<br>
+            Все права защищены
+          </p>
+          <div>
+            <ul class="social-networks">
+              <li><a class="button-social" href="#"><span class="visually-hidden">Вконтакте</span><img src="img/icon-vk.svg" width="25" height="15" alt="Логотип vk"></a></li>
+              <li><a class="button-social" href="#"><span class="visually-hidden">Facebook</span><img src="img/icon-fb.svg" width="12" height="22" alt="Логотип fb"></a></li>
+              <li><a class="button-social" href="#"><span class="visually-hidden">Instagram</span><img src="img/icon-insta.svg" width="21" height="21" alt="Логотип inst"></a></li>
+            </ul>
+          </div>
+          <div class="footer-mail">
+            <div class="feedback">
+              <p>Обратная связь:</p>
+              <p class="mail-address">mail@htmlacademy.ru</p>
+            </div>
+            <div class="develop">
+              <p>Разработано -</p>
+              <a class="mail-address" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+            </div>
+          </div>
         </div>
     </footer>
       <!-- Попап -->

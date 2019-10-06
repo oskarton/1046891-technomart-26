@@ -10,20 +10,23 @@
 
   <body>
     <header class="main-header">
-      <div class="search-panel">
+
+      <div class="all-search-panel">
+        <div class="wrapper search-panel">
         <a class="header-logo button" href="index.html">
           <img src="img/logo-technomart.svg" width="110" height="20" alt="Логотип «Техномарта»">
         </a>
         <form class="search-form" action="" method="get">
+          <label class="visually-hidden" for="search">Поиск</label>
           <img src="img/icon-search.svg" width="17" height="17" alt="Поиск">
-          <label  class="visually-hidden" for="search">Поиск</label>
           <input class="button-search" id="search" type="text" name="search" placeholder="Поиск:">
         </form>
-        <a class="button button-bookmark" href="#"><img src="img/icon-bookmark.svg" width="14" height="16" alt="флажок закладки">Закладки</a>
-        <a class="button button-cart" href="#"><img src="img/icon-cart.svg" width="15" height="15" alt="корзина">Корзина</a>
+        <a class="button button-bookmark" href="#"><img src="img/icon-bookmark.svg" width="14" height="16" alt="флажок закладки"><span>Закладки: 0</span></a>
+        <a class="button button-cart" href="#"><img src="img/icon-cart.svg" width="15" height="15" alt="корзина"><span>Корзина: 0</span></a>
         <button class="button button-order" type="submit">Оформить заказ</button>
       </div>
-      <div class="text-tel-logo">
+      </div>
+      <div class="text-tel-logo wrapper">
           <p>Интернет-магазин<br>
             строительных материалов<br>
             и инструментов для ремонта</p>
@@ -33,10 +36,11 @@
               <span class="address-company">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
             </p>
           </div>
-                <a class="button button-login" href="#"><img src="img/icon-login.svg" width="20" height="17" alt="логин">Войти</a></li>
-                <a href="#" class="button button-login">Регистрация</a></li>
+          <ul class="user-navigation">
+                <li><a class="button button-login" href="#"><img src="img/icon-login.svg" width="20" height="17" alt="логин"><span>Войти</span></a></li>
+                <li><a class="button button-login" href="#" class="button button-login"><span>Регистрация</span></a></li>
       </div>
-        <nav class="navigation">
+        <nav class="navigation wrapper">
             <ul>
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="company.html">Компания</a></li>
@@ -51,13 +55,14 @@
 
     <main class="content">
         <h1 class="visually-hidden">«Техномарт»</h1>
-        <section class="promo">
+        <section class="promo wrapper">
           <h2 class="visually-hidden">Промо-блок</h2>
           <div class="promo-block yellow-block">
             <p>Материалы</p>
+            <a class="button button-promo" href="material.html">на любой вкус</a>
             <img class="new-flag" src="img/new-flag.png" width="60" height="60" alt="новинка">
             <img src="img/icon-1.svg" width="45" height="65" alt="материалы">
-            <a class="button button-promo" href="material.html">на любой вкус</a>
+
           </div>
           <div class="promo-block blue-block">
             <p>Инструмент</p>
@@ -69,38 +74,54 @@
             <a class="button button-promo" href="technic.html">для стройки</a>
             <img src="img/icon-3.svg" width="80" height="60" alt="техника">
           </div>
-          <div class="slider">
-            <p class="uppercase">Дрели</p>
-            <p>соседям на радость!</p>
-            <a class="button button-red" href="catalog.html">открыть каталог</a>
-            <img src="img/slider-image.png" width="620" height="265" alt="дрели">
-          </div>
-          <div class="slider">
-            <p class="uppercase">Перфораторы</p>
-            <p>Настояшие мужские игрушки</p>
-            <a class="button button-red" href="catalog.html">открыть каталог</a>
-            <img src="img/slide-image.png" width="620" height="265" alt="перфораторы">
-          </div>
-          <div class="promo-block green-block">
-            <p>Скидка 50%</p>
-            <a class="button button-promo" href="special.html">на 350 товаров</a>
-            <img src="img/icon-4.svg" width="60" height="70" alt="скидки">
-          </div>
-          <div class="promo-block yellow-c-block">
-            <p>Доставка</p>
-            <a class="button button-promo" href="delivery.html">бесплатно</a>
-            <img src="img/icon-5.svg" width="80" height="65" alt="доставка">
+          <section class="sliders">
+          <h2 class="visually-hidden">Дрели и перфораторы</h2>
+            <div class="slider">
+              <ul class="slider-list">
+                <li class="slider-item">
+                  <p class="uppercase">Дрели</p>
+                  <p>соседям на радость!</p>
+                  <a class="button button-red button-open-catalog" href="catalog.html">открыть каталог</a>
+                  <img src="img/slider-image.png" width="620" height="265" alt="дрели">
+                </li>
+                <li class="slider-item">
+                  <p class="uppercase">Перфораторы</p>
+                  <p>Настояшие мужские игрушки</p>
+                  <a class="button button-red button-open-catalog" href="catalog.html">открыть каталог</a>
+                  <img src="img/slide-image.png" width="620" height="265" alt="перфораторы">
+                </li>
+                <div class="slider-controls">
+                    <i class="active"></i>
+                    <i></i>
+                </div>
+                <div class="right-left">
+                  <img class="left" src="img/icon-left.svg" width="22" height="40" alt="влево">
+                  <img class="right" src="img/icon-right.svg" width="22" height="40" alt="вправо">
+                </div>
+          </section>
+
+          <div class="promo-little-block">
+            <div class="promo-block green-block">
+              <p>Скидка 50%</p>
+              <a class="button button-promo" href="special.html">на 350 товаров</a>
+              <img src="img/icon-4.svg" width="60" height="70" alt="скидки">
+            </div>
+            <div class="promo-block yellow-c-block">
+              <p>Доставка</p>
+              <a class="button button-promo" href="delivery.html">бесплатно</a>
+              <img src="img/icon-5.svg" width="80" height="65" alt="доставка">
+            </div>
           </div>
         </section>
 
-        <section class="populat-items">
+        <section class="popular-items wrapper">
           <h2 class="visually-hidden">Товары</h2>
           <div class="popular-items-button">
             <h3 class="heading popular-items">Популярные товары:</h3>
             <button class="button button-red button-all-popular" type="button">все популярные товары</button>
           </div>
-          <div class="items">
-          <div class="item-card">
+          <div class="items-index">
+          <div class="item-cards">
               <div class="item-buttons">
                 <img src="img/icon-cart.svg" width="15" height="15" alt="корзина">
                 <button class="button button-buy" type="button">Купить</button>
@@ -116,7 +137,7 @@
                 <button class="button button-price" type="button">22500 Р.</button>
               </div>
           </div>
-          <div class="item-card">
+          <div class="item-cards">
               <div class="item-buttons">
                 <img src="img/icon-cart.svg" width="15" height="15" alt="корзина">
                 <button class="button button-buy" type="button">Купить</button>
@@ -133,7 +154,7 @@
               </div>
             </div>
 
-            <div class="item-card">
+            <div class="item-cards">
               <div class="item-buttons">
                 <img src="img/icon-cart.svg" width="15" height="15" alt="корзина">
                   <button class="button button-buy" type="button">Купить</button>
@@ -150,7 +171,7 @@
               </div>
             </div>
 
-            <div class="item-card">
+            <div class="item-cards">
 
               <div class="item-buttons">
                 <img class="new-item" src="img/new-flag.png" width="60" height="60" alt="новинка">
@@ -170,7 +191,7 @@
           </div>
         </section>
 
-        <section>
+        <section class="wrapper">
           <h2 class="visually-hidden">Производители</h2>
           <div class="popular-items-button">
             <p class="heading popular-items">Популярные производители:</p>
@@ -219,64 +240,73 @@
             </div>
           </div>
         </section>
-
         <section class="services">
           <h2 class="visually-hidden">Сервисы</h2>
-          <h3 class="heading">Сервисы</h3>
-          <p class="text-margin">
-            Хороший интернет-магазин отличается от плохого не только ценами!<br>
-            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
-          </p>
-          <div class="navigation-discription">
-            <ul class="service-navigation">
-              <li class="active-white"><a href="#">Доставка</a></li>
-              <li><a href="#">Гарантия</a></li>
-              <li><a href="#">Кредит</a></li>
-            </ul>
-            <img src="img/divider.png">
-           <h4>Доставка</h4>
-            <p>
-              Мы с удовольствием доставим ваш товар прямо<br>
-              к вашему подъезду совершенно бесплатно!<br>
-              Ведь мы неплохо заработаем,<br>
-              поднимая его на ваш этаж!
-            </p>
-            <img src="img/delivery.png" width="470" height="260" alt="доставка">
+          <div class="wrapper">
+            <h3 class="heading">Сервисы</h3>
+              <p>
+                Хороший интернет-магазин отличается от плохого не только ценами!<br>
+                Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+              </p>
+              <div class="services-navigation">
+                <ul class="service-navigation">
+                  <li class="active-white"><a href="#">Доставка</a></li>
+                  <li><a href="#">Гарантия</a></li>
+                  <li><a href="#">Кредит</a></li>
+                </ul>
+                <img class="dividers" src="img/divider.png" width="10" height="279" alt="тень от навигации">
+                <div class="text-block">
+                   <h4>Доставка</h4>
+                    <p>
+                      Мы с удовольствием доставим ваш товар прямо<br>
+                      к вашему подъезду совершенно бесплатно!<br>
+                      Ведь мы неплохо заработаем,<br>
+                      поднимая его на ваш этаж!
+                    </p>
+                </div>
+                <img src="img/delivery.png" width="470" height="261" alt="доставка">
+              </div>
+              <div class="services-navigation">
+                  <ul class="service-navigation">
+                    <li><a href="#">Доставка</a></li>
+                    <li class="active-white"><a href="#">Гарантия</a></li>
+                    <li><a href="#">Кредит</a></li>
+                  </ul>
+                  <img class="dividers" src="img/divider.png" width="10" height="279" alt="тень от навигации">
+                  <div class="text-block">
+                    <h4>Гарантия</h4>
+                    <p>
+                      Если купленный у нас товар поломается или заискрит,<br>
+                      а также в случае пожара, спровоцированного его возгоранием,<br>
+                      вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
+                      сгоревший товар на новый.<br>
+                      Дом уж восстановите как-нибудь сами.
+                    </p>
+                  </div>
+                <img src="img/guarantee.png" width="390" height="280" alt="гарантия">
+              </div>
+              <div class="services-navigation">
+                <ul class="service-navigation">
+                  <li><a href="#">Доставка</a></li>
+                  <li><a href="#">Гарантия</a></li>
+                  <li class="active-white"><a href="#">Кредит</a></li>
+                </ul>
+                <img class="dividers" src="img/divider.png" width="10" height="279" alt="тень от навигации">
+                <div class="text-block">
+                  <h4>Кредит</h4>
+                  <p>
+                    Залезть в долговую яму стало проще!<br>
+                    Кредитные консультанты придут вам на помощь.
+                  </p>
+                  <button class="button button-red button-credit">Оставить заявку</button>
+                </div>
+              <img src="img/credit.png" width="465" height="285" alt="кредит">
+              </div>
           </div>
-          <div class="navigation-discription">
-              <ul class="service-navigation">
-                <li class="active-white"><a href="#">Доставка</a></li>
-                <li><a href="#">Гарантия</a></li>
-                <li><a href="#">Кредит</a></li>
-              </ul>
-              <img src="img/divider.png">
-            <h4>Гарантия</h4>
-            <p>
-              Если купленный у нас товар поломается или заискрит,<br>
-              а также в случае пожара, спровоцированного его возгоранием,<br>
-              вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
-              сгоревший товар на новый.<br>
-              Дом уж восстановите как-нибудь сами.
-            </p>
-            <img src="img/guarantee.png" width="390" height="280" alt="гарантия">
-          </div>
-          <div class="navigation-discription">
-            <ul class="service-navigation">
-              <li class="active-white"><a href="#">Доставка</a></li>
-              <li><a href="#">Гарантия</a></li>
-              <li><a href="#">Кредит</a></li>
-            </ul>
-            <img src="img/divider.png">
-          <h4>Кредит</h4>
-          <p>
-            Залезть в долговую яму стало проще!<br>
-            Кредитные консультанты придут вам на помощь.
-          </p>
-          <img src="img/credit.png" width="465" height="285" alt="кредит">
           </div>
         </section>
 
-        <section class="company">
+        <section class="company wrapper">
           <h2 class="visually-hidden">КОМПАНИЯ «Техномарт»</h2>
           <div class="about-company">
             <h3 class="heading">Компания «Техномарт»</h3>
@@ -308,15 +338,16 @@
     </main>
     <footer class="main-footer">
       <div class="address-company-footer">
-        <div class="logo-and-adress">
-          <a class="footer-logo" href="index.html">
+        <div class="wrapper">
+          <div class="logo-and-adress">
+            <a class="footer-logo" href="index.html">
             <img src="img/logo-technomart.svg" width="140" height="20" alt="Логотип «Техномарта»">
-          </a>
-          <p>
-          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-          +7 (812) 555-05-55
-          </p>
-        </div>
+            </a>
+              <p>
+              г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+              +7 (812) 555-05-55
+              </p>
+          </div>
         <div class="navigation-footer">
             <ul class="white-navigation">
                 <li><a href="company.html">Компания</a></li>
@@ -333,26 +364,29 @@
             </ul>
         </div>
       </div>
-      <div class="copyright">
-        <p>
-          © 2010–2019 Компания «Техномарт»<br>
-          Все права защищены
-        </p>
-        <div>
-          <ul class="social-networks">
-            <li><a class="button-social" href="#"><span class="visually-hidden">Вконтакте</span><img src="img/icon-vk.svg" width="25" height="15" alt="Логотип vk"></a></li>
-            <li><a class="button-social" href="#"><span class="visually-hidden">Facebook</span><img src="img/icon-fb.svg" width="12" height="22" alt="Логотип fb"></a></li>
-            <li><a class="button-social" href="#"><span class="visually-hidden">Instagram</span><img src="img/icon-insta.svg" width="21" height="21" alt="Логотип inst"></a></li>
-          </ul>
-        </div>
-        <div class="feedback">
-          <p>Обратная связь:</p>
-          <p class="mail-address">mail@htmlacademy.ru</p>
-        </div>
-        <div class="develop">
-          <p>Разработано:</p>
-          <a class="mail-address" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
-        </div>
+      </div>
+        <div class="copyright wrapper">
+          <p>
+            © 2010–2019 Компания «Техномарт»<br>
+            Все права защищены
+          </p>
+          <div>
+            <ul class="social-networks">
+              <li><a class="button-social" href="#"><span class="visually-hidden">Вконтакте</span><img src="img/icon-vk.svg" width="25" height="15" alt="Логотип vk"></a></li>
+              <li><a class="button-social" href="#"><span class="visually-hidden">Facebook</span><img src="img/icon-fb.svg" width="12" height="22" alt="Логотип fb"></a></li>
+              <li><a class="button-social" href="#"><span class="visually-hidden">Instagram</span><img src="img/icon-insta.svg" width="21" height="21" alt="Логотип inst"></a></li>
+            </ul>
+          </div>
+          <div class="footer-mail">
+            <div class="feedback">
+              <p>Обратная связь:</p>
+              <p class="mail-address">mail@htmlacademy.ru</p>
+            </div>
+            <div class="develop">
+              <p>Разработано -</p>
+              <a class="mail-address" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+            </div>
+          </div>
         </div>
     </footer>
 
