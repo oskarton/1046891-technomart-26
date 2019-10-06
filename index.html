@@ -58,21 +58,32 @@
         <section class="promo wrapper">
           <h2 class="visually-hidden">Промо-блок</h2>
           <div class="promo-block yellow-block">
-            <p>Материалы</p>
-            <a class="button button-promo" href="material.html">на любой вкус</a>
+            <div class="promo-block-text">
+              <p>Материалы</p>
+              <a class="button button-promo" href="material.html">на любой вкус</a>
+            </div>
+            <div class="promo-block-img">
+              <img src="img/icon-1.svg" width="45" height="65" alt="материалы">
+            </div>
             <img class="new-flag" src="img/new-flag.png" width="60" height="60" alt="новинка">
-            <img src="img/icon-1.svg" width="45" height="65" alt="материалы">
-
           </div>
           <div class="promo-block blue-block">
-            <p>Инструмент</p>
-            <a class="button button-promo" href="instrument.html">на все случаи</a>
-            <img src="img/icon-2.svg" width="75" height="60" alt="инструменты">
+            <div class="promo-block-text">
+              <p>Инструмент</p>
+              <a class="button button-promo" href="instrument.html">на все случаи</a>
+            </div>
+            <div class="promo-block-img">
+              <img class="promo-img" src="img/icon-2.svg" width="75" height="60" alt="инструменты">
+            </div>
           </div>
           <div class="promo-block purpl-block">
-            <p>Техника</p>
-            <a class="button button-promo" href="technic.html">для стройки</a>
-            <img src="img/icon-3.svg" width="80" height="60" alt="техника">
+            <div class="promo-block-text">
+              <p>Техника</p>
+              <a class="button button-promo" href="technic.html">для стройки</a>
+            </div>
+            <div class="promo-block-img">
+              <img class="promo-img" src="img/icon-3.svg" width="80" height="60" alt="техника">
+            </div>
           </div>
           <section class="sliders">
           <h2 class="visually-hidden">Дрели и перфораторы</h2>
@@ -102,14 +113,21 @@
 
           <div class="promo-little-block">
             <div class="promo-block green-block">
-              <p>Скидка 50%</p>
-              <a class="button button-promo" href="special.html">на 350 товаров</a>
-              <img src="img/icon-4.svg" width="60" height="70" alt="скидки">
-            </div>
+              <div class="promo-block-text">
+                <p>Скидка 50%</p>
+                <a class="button button-promo" href="special.html">на 350 товаров</a>
+              </div>
+              <div class="promo-block-img">
+                <img class="promo-img" src="img/icon-4.svg" width="60" height="70" alt="скидки">
+              </div>
             <div class="promo-block yellow-c-block">
-              <p>Доставка</p>
-              <a class="button button-promo" href="delivery.html">бесплатно</a>
-              <img src="img/icon-5.svg" width="80" height="65" alt="доставка">
+              <div class="promo-block-text">
+                <p>Доставка</p>
+                <a class="button button-promo" href="delivery.html">бесплатно</a>
+              </div>
+              <div class="promo-block-img">
+                <img class="promo-img" src="img/icon-5.svg" width="80" height="65" alt="доставка">
+              </div>
             </div>
           </div>
         </section>
@@ -248,8 +266,8 @@
                 Хороший интернет-магазин отличается от плохого не только ценами!<br>
                 Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
               </p>
-              <div class="services-navigation">
-                <ul class="service-navigation">
+              <div class="services-navigation delivery">
+                <ul class="service-navigation ">
                   <li class="active-white"><a href="#">Доставка</a></li>
                   <li><a href="#">Гарантия</a></li>
                   <li><a href="#">Кредит</a></li>
@@ -264,9 +282,10 @@
                       поднимая его на ваш этаж!
                     </p>
                 </div>
-                <img src="img/delivery.png" width="470" height="261" alt="доставка">
+                <img class="servises-img" src="img/delivery.png" width="470" height="261" alt="доставка">
               </div>
-              <div class="services-navigation">
+
+              <div class="services-navigation guarantee">
                   <ul class="service-navigation">
                     <li><a href="#">Доставка</a></li>
                     <li class="active-white"><a href="#">Гарантия</a></li>
@@ -283,9 +302,9 @@
                       Дом уж восстановите как-нибудь сами.
                     </p>
                   </div>
-                <img src="img/guarantee.png" width="390" height="280" alt="гарантия">
+                <img class="servises-img" src="img/guarantee.png" width="390" height="280" alt="гарантия">
               </div>
-              <div class="services-navigation">
+              <div class="services-navigation credit">
                 <ul class="service-navigation">
                   <li><a href="#">Доставка</a></li>
                   <li><a href="#">Гарантия</a></li>
@@ -300,7 +319,7 @@
                   </p>
                   <button class="button button-red button-credit">Оставить заявку</button>
                 </div>
-              <img src="img/credit.png" width="465" height="285" alt="кредит">
+              <img class="servises-img" src="img/credit.png" width="465" height="285" alt="кредит">
               </div>
           </div>
           </div>
