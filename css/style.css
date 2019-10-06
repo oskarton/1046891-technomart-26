@@ -141,8 +141,8 @@ input[type="radio"].visually-hidden {
   margin-left: 35px;
 }
 
-/* Поиск */
 
+/* Поиск */
 .button-search {
   font-size: 17px;
   color: #fff;
@@ -344,7 +344,7 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
   position: absolute;
   top: 105px;
-  right: 510px;
+  right: 750px;
   opacity: 0.3;
 }
 
@@ -357,7 +357,7 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
   position: absolute;
   top: 105px;
-  right: 270px;
+  right: 510px;
   opacity: 0.3;
 }
 /* навигация */
@@ -481,45 +481,67 @@ ul.breadcrumb {
   color: #fff;
 
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
-
-/* .promo-text {
-  display: block;
-  text-align: left;
-} */
 
 .promo-little-block {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   height: 266px;
+  justify-content: space-between;
 }
 
+/* .promo-little-block:nth-child(2){
+  paddin
+} */
 
 .promo-block p {
+  display: flex;
+
+  width: 135px;
+  height: 20px;
+
+  margin-top: 26px;
+  margin-bottom: 13px;
+}
+
+.promo-block-text {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
   padding-left: 23px;
+  box-sizing: border-box;
+}
+
+.promo-block-img {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+
 }
 
 .promo-block a {
+  display: flex;
   color: #fff;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   font-weight: normal;
-}
 
-.button-promo {
-  min-width: 135px;
+  width: 111px;
   height: 20px;
-  padding-top:  14px;
-  padding-bottom: 14px;
+
+  padding-top:  9px;
+  padding-bottom: 9px;
+  padding-left: 24px;
+
+  text-align: center;
 
   opacity: 0.1;
   background-color: #000000;
-
-/*   position: relative;
-  top: 70px;
-  left: -110px; */
+  margin-bottom: 22px;
 }
+
 
 .new-flag {
   position: absolute;
@@ -533,8 +555,7 @@ ul.breadcrumb {
 
 .yellow-c-block {
   background-color: #ffcf47;
-  display: flex;
-  flex-wrap: wrap;
+  margin-top: 25px;
 }
 
 .blue-block {
@@ -626,6 +647,8 @@ ul.breadcrumb {
 
 .services-navigation {
   display: flex;
+  position: relative;
+  height: 333px;
 }
 
 .service-navigation {
@@ -652,21 +675,27 @@ ul.breadcrumb {
 
 .dividers {
   margin-left: -10px;
+  position: absolute;
+  left: 240px;
+
 }
 
 .service-navigation li:hover {
   background-color: #293449;
 }
 
-.active-white {
+.active-white a{
   color: #32425c;
-  background-color: #fff;
+}
 
+.active-white {
+  background-color: #fff;
 }
 
 .text-block {
   display: block;
   margin-left: 80px;
+  z-index: 1;
 }
 
 .button-credit {
@@ -679,8 +708,22 @@ ul.breadcrumb {
   margin-top: 15px;
   margin-bottom: 60px;
 }
-/* слайдер */
 
+
+.servises-img {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  z-index: 0;
+}
+
+.guarantee,
+.credit {
+  display: none;
+}
+
+
+/* слайдер */
 .sliders {
   width: 620px;
 }
@@ -830,6 +873,7 @@ ul.breadcrumb {
 .filters {
   font-family: PTSans, sans-serif;
   text-transform: uppercase;
+  width: 220px;
 }
 
 .filters h2 {
@@ -863,6 +907,7 @@ fieldset.filters-by-type {
   margin: 0;
   margin-left: 20px;
 }
+
 .filters-by-type {
   margin-left: 20px;
   display: inline-flex;
@@ -909,7 +954,6 @@ fieldset.filters-by-type {
   text-transform: uppercase;
 }
 
-
 fieldset.price {
   padding: 0;
   margin: 0;
@@ -923,7 +967,7 @@ fieldset.price {
 .cost {
   text-align: left;
   color: #000;
-  font-size: 14px;
+  font-size: 17px;
   line-height: 30px;
   font-weight: bold;
   vertical-align: center;
@@ -978,7 +1022,7 @@ fieldset.price {
   border-radius: 5px;
 
   position: relative;
-  background-color: #f1f1f1;
+  background-color: #f7f3ec;
   margin-bottom: 9px;
   width: 220px;
   height: 80px;
@@ -1027,8 +1071,6 @@ fieldset.price {
   left: 65%;
 }
 
-
-
 .sort-filter {
   display: flex;
   flex-wrap: nowrap;
@@ -1053,85 +1095,132 @@ fieldset.price {
   flex-wrap: nowrap;
 }
 
-.producers {
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 30px;
-}
-
 .filters-by {
   width: 220px;
-  display: flex;
+/*   display: flex;
   flex-wrap: wrap;
   font-size: 15px;
   line-height: 20px;
-  vertical-align: middle;
+  vertical-align: middle; */
 }
 
-.filters-by-made {
-  padding:0;
+.filter fieldset {
+  padding: 0;
   margin: 0;
-  text-align: left;
+  margin-bottom: 30px;
+
   border: none;
-  max-height: 250px;
 }
 
-.powers {
-    font-weight: bold;
+.filter fieldset:first-child {
+  margin-bottom: 35px;
+}
+
+.filter legend {
+ font-weight: bold;
   font-size: 17px;
   line-height: 30px;
+
+  margin-bottom: 20px;
+  margin-top: 50px;
 }
 
-ul.radio {
+.filter ul {
   padding: 0;
-}
-
-.filters-by-power {
-  border: none;
-  padding:0;
   margin: 0;
 
-  text-align: left;
-}
+  font-size: 15px;
 
-.divider {
-  width: 220px;
-  height: 1px;
-}
-
-ul.checkbox {
-  padding: 0;
-}
-
-.checkbox li,
-.radio li {
   list-style: none;
-  vertical-align: middle;
+  line-height: 20px;
 }
 
-input[type="checkbox"] {
-  display: none;
+.filter-option {
+  margin-bottom: 19px;
+  padding-left: 45px;
 }
 
-.checkbox img {
+.filter-option label {
+  position: relative;
+
+  display: block;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: 0;
+
+  width: 23px;
+  height: 23px;
+
+  background-image: url('/Users/olgaovcharova/Study/1046891-technomart-26/img/checkbox-off.svg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
   opacity: 0.2;
-  vertical-align: middle;
-  padding-top: 7px;
-  padding-bottom: 10px;
-  padding-right: 10px;
 }
 
-input[type="radio"] {
-  display: none;
-}
+.filter-input-checkbox:checked + label::after {
+  content: "";
 
-.radio img {
+  position: absolute;
+  top: 0px;
+  left: -42px;
+
+  width: 27px;
+  height: 23px;
+
+  background-image: url('/Users/olgaovcharova/Study/1046891-technomart-26/img/checkbox-on.svg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  z-index: 2;
   opacity: 0.2;
-  padding-top: 6px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  vertical-align: middle;
 }
+
+.filter-input:hover + label,
+.filter-input:focus + label {
+  color: #663d15;
+}
+
+.filter-input:disabled + label {
+  color: #000000;
+
+  opacity: 0.5;
+}
+
+.filter-input-radio + label::before {
+  content: "";
+
+  position: absolute;
+  left: -42px;
+  top: -3px;
+
+  width: 22px;
+  height: 22px;
+
+  border: 4px solid #c5c5c5;
+  border-radius: 50%;
+}
+
+.filter-input-radio:checked + label::after {
+  content: "";
+
+  position: absolute;
+  top: 5px;
+  left: -34px;
+
+  width: 14px;
+  height: 14px;
+
+  border-radius: 50%;
+
+  background-color: #c5c5c5;
+}
+
 
 .sort-by {
   background-color: #f7f3ec;
@@ -1190,7 +1279,7 @@ input[type="radio"] {
   display: flex;
   flex-wrap: wrap;
 
-  width: 940px;
+  max-width: 700px;
   text-align: center;
 }
 
@@ -1330,7 +1419,7 @@ input[type="radio"] {
 
 .new-item {
   position: relative;
-  left: 161px;
+  left: 92px;
   z-index: 2;
   }
 
@@ -1434,22 +1523,53 @@ input[type="radio"] {
   min-height: 282px;
   box-shadow: 0 -5px 0 0 red;
   text-align: center;
+
+  position: fixed;
+  top: 50%;
+  left: 30%;
+  background-color: #fff;
+  z-index: 10;
+  box-shadow: 0px 20px 40px 0 rgba(41, 52, 73, 0.75);
+}
+
+.modal-check {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+
 }
 
 .popup-in-cart h3 {
+  margin: 68px 32px;
   font-size: 30px;
+  font-weight: normal;
   line-height: 30px;
+  width: 316px;
 }
 
 .popup-buttons {
+  padding-top: 37px;
   background-color: #f1f1f1;
-  min-height: 112px;
+  height: 75px;
+
 }
 
-.button-popup-order {
-  background-color: #ee3643;
+.popup-button {
+  height: 38px;
+  width: 220px;
+  padding-top: 10px;
+  padding-bottom: 14px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
+.button-popup-shop{
+  color: #000;
+
+  margin-left: 20px;
+}
 /* страница каталога */
 .catalog-pages {
   display: flex;
@@ -1615,6 +1735,7 @@ li.active {
 
 .social-networks {
   text-align: center;
+  margin-left: 110px;
 }
 
 .social-networks li{
@@ -1644,7 +1765,7 @@ li.active {
   justify-content: flex-end;
   width: 350px;
 
-  margin-left: 185px;
+  margin-left: 65px;
 }
 
 .modal-close,
