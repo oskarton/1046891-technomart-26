@@ -107,57 +107,55 @@
                     <p>-</p>
                     <label class="max-price"><input type="text" name="max-price" value="30000"></label>
                   </div>
+                </div>
               </fieldset>
-              <div class="filters-by">
-              <fieldset class="filters-by-made">
-                <legend class="producers">Производители:</legend>
-                <ul class="checkbox">
-                  <li>
-                    <img src="img/checkbox-on.svg">
-                    <label for="bocsh">bocsh</label>
-                    <input id="bocsh" type="checkbox" checked>
-                  </li>
-                  <li>
-                    <img src="img/checkbox-off.svg">
-                    <label for="интерскол">интерскол</label>
-                    <input id="интерскол" type="checkbox">
-                  </li>
-                  <li>
-                    <img src="img/checkbox-on.svg">
-                    <label for="makita">makita</label>
-                    <input id="makita" type="checkbox" checked>
-                  </li>
-                  <li>
-                    <img src="img/checkbox-off.svg">
-                    <label for="dewalt">dewalt</label>
-                    <input id="dewalt" type="checkbox">
-                  </li>
-                  <li>
-                    <img src="img/checkbox-off.svg">
-                    <label for="hitachi">hitachi</label>
-                    <input id="hitachi" type="checkbox">
-                  </li>
-                </ul>
-              </fieldset>
-                <div class="divider"> </div>
-              <fieldset class="filters-by-power">
-                <legend class="powers">Питание:</legend>
-                <ul class="radio">
-                  <li class="radio-on">
-    <!--                 <img src="img/radio-on.svg"> -->
-                    <label for="battery" class="radio"><img src="img/radio-on.svg">Аккумуляторные</label>
-                    <input id="battery" type="radio" checked name="power">
-                  </li>
-                  <li>
-                    <img src="img/radio-off.svg">
-                    <label for="main-power" class="radio">Сетевые</label>
-                    <input id="main-power" type="radio" name="power">
-                  </li>
-                </ul>
-              </fieldset>
-                <button class="button button-show" type="button">Показать</button>
-            </div>
-          </div>
+              <section class="filters-by">
+                <h2 class="visually-hidden">Фильтр товаров</h2>
+                <form class="filter" method="get" action="#">
+                <fieldset class="filters-by-made">
+                  <legend class="producers">Производители:</legend>
+                  <ul>
+                    <li class="filter-option">
+                      <input class="visually-hidden filter-input filter-input-checkbox" name="bocsh" id="bocsh" type="checkbox" checked>
+                      <label for="bocsh">bocsh</label>
+                    </li>
+                    <li class="filter-option">
+                      <input class="visually-hidden filter-input filter-input-checkbox" name="интерскол" id="интерскол" type="checkbox">
+                      <label for="интерскол">интерскол</label>
+                    </li>
+                    <li class="filter-option">
+                      <input class="visually-hidden filter-input filter-input-checkbox" name="makita" id="makita" type="checkbox" checked>
+                      <label for="makita">makita</label>
+                    </li>
+                    <li class="filter-option">
+                      <input class="visually-hidden filter-input filter-input-checkbox" name="dewalt" id="dewalt" type="checkbox">
+                      <label for="dewalt">dewalt</label>
+                    </li>
+                    <li class="filter-option">
+                      <input class="visually-hidden filter-input filter-input-checkbox" name="hitachi" id="hitachi" type="checkbox">
+                      <label for="hitachi">hitachi</label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <fieldset class="filters-by-power">
+                  <legend>Питание:</legend>
+                  <ul>
+                    <li class="filter-option">
+                      <input class="visually-hidden filter-input filter-input-radio" name="power-group" id="battery" type="radio" value="powers" checked>
+                      <label for="battery">Аккумуляторные</label>
+                    </li>
+
+                    <li class="filter-option">
+                      <input class="visually-hidden filter-input filter-input-radio" id="main-power" type="radio" name="power" value="powers">
+                      <label for="main-power">Сетевые</label>
+                    </li>
+                  </ul>
+                </fieldset>
+                  <button class="button button-show" type="button">Показать</button>
+                  </div>
+                </div>
+                </form>
+              </section>
 
 
           <section class="items">
@@ -389,11 +387,13 @@
     </footer>
       <!-- Попап -->
       <section class="popup-in-cart">
-        <img src="img/modal-check.svg">
-        <h3>Товар добавлен в корзину!</h3>
+        <div class="modal-check">
+          <img src="img/modal-check.svg">
+          <h3>Товар добавлен в корзину!</h3>
+        </div>
         <div class="popup-buttons">
-          <button class="button button-popup-order" type="submit">Оформить заказ</button>
-          <button class="button button-popup-shop" type="submit">Продолжить покупки</button>
+          <button class="button button-cart-red popup-button button-popup-order" type="submit">Оформить заказ</button>
+          <button class="button popup-button button-popup-shop" type="submit">Продолжить покупки</button>
         </div>
           <button class="button button-close" type="button">Закрыть</button>
       </section>
