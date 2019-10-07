@@ -13,18 +13,18 @@
 
       <div class="all-search-panel">
         <div class="wrapper search-panel">
-        <a class="header-logo button" href="index.html">
-          <img src="img/logo-technomart.svg" width="110" height="20" alt="Логотип «Техномарта»">
-        </a>
-        <form class="search-form" action="" method="get">
-          <label class="visually-hidden" for="search">Поиск</label>
-          <img src="img/icon-search.svg" width="17" height="17" alt="Поиск">
-          <input class="button-search" id="search" type="text" name="search" placeholder="Поиск:">
-        </form>
-        <a class="button button-bookmark" href="#"><img src="img/icon-bookmark.svg" width="14" height="16" alt="флажок закладки"><span>Закладки: 0</span></a>
-        <a class="button button-cart" href="#"><img src="img/icon-cart.svg" width="15" height="15" alt="корзина"><span>Корзина: 0</span></a>
-        <button class="button button-order" type="submit">Оформить заказ</button>
-      </div>
+          <a class="header-logo button" href="index.html">
+            <img src="img/logo-technomart.svg" width="110" height="20" alt="Логотип «Техномарта»">
+          </a>
+          <form class="search-form" method="get">
+            <label class="visually-hidden" for="search">Поиск</label>
+            <img src="img/icon-search.svg" width="17" height="17" alt="Поиск">
+            <input class="button-search" id="search" type="text" name="search" placeholder="Поиск:">
+          </form>
+          <a class="button button-bookmark" href="#"><img src="img/icon-bookmark.svg" width="14" height="16" alt="флажок закладки"><span>Закладки: 0</span></a>
+          <a class="button button-cart" href="#"><img src="img/icon-cart.svg" width="15" height="15" alt="корзина"><span>Корзина: 0</span></a>
+          <button class="button button-order" type="submit">Оформить заказ</button>
+        </div>
       </div>
       <div class="text-tel-logo wrapper">
           <p>Интернет-магазин<br>
@@ -38,7 +38,8 @@
           </div>
           <ul class="user-navigation">
                 <li><a class="button button-login" href="#"><img src="img/icon-login.svg" width="20" height="17" alt="логин"><span>Войти</span></a></li>
-                <li><a class="button button-login" href="#" class="button button-login"><span>Регистрация</span></a></li>
+                <li><a class="button button-login" href="#"><span>Регистрация</span></a></li>
+          </ul>
       </div>
         <nav class="navigation wrapper">
             <ul>
@@ -57,7 +58,7 @@
         <h1 class="visually-hidden">«Техномарт»</h1>
         <section class="promo wrapper">
           <h2 class="visually-hidden">Промо-блок</h2>
-          <div class="promo-block yellow-block">
+          <div class="promo-block yellow-block item-new">
             <div class="promo-block-text">
               <p>Материалы</p>
               <a class="button button-promo" href="material.html">на любой вкус</a>
@@ -65,7 +66,6 @@
             <div class="promo-block-img">
               <img src="img/icon-1.svg" width="45" height="65" alt="материалы">
             </div>
-            <img class="new-flag" src="img/new-flag.png" width="60" height="60" alt="новинка">
           </div>
           <div class="promo-block blue-block">
             <div class="promo-block-text">
@@ -86,7 +86,7 @@
             </div>
           </div>
           <section class="sliders">
-          <h2 class="visually-hidden">Дрели и перфораторы</h2>
+            <h2 class="visually-hidden">Дрели и перфораторы</h2>
             <div class="slider">
               <ul class="slider-list">
                 <li class="slider-item">
@@ -101,6 +101,7 @@
                   <a class="button button-red button-open-catalog" href="catalog.html">открыть каталог</a>
                   <img src="img/slide-image.png" width="620" height="265" alt="перфораторы">
                 </li>
+              </ul>
                 <div class="slider-controls">
                     <i class="active"></i>
                     <i></i>
@@ -109,8 +110,8 @@
                   <img class="left" src="img/icon-left.svg" width="22" height="40" alt="влево">
                   <img class="right" src="img/icon-right.svg" width="22" height="40" alt="вправо">
                 </div>
+            </div>
           </section>
-
           <div class="promo-little-block">
             <div class="promo-block green-block">
               <div class="promo-block-text">
@@ -130,7 +131,9 @@
               </div>
             </div>
           </div>
+          </div>
         </section>
+
 
         <section class="popular-items wrapper">
           <h2 class="visually-hidden">Товары</h2>
@@ -189,10 +192,8 @@
               </div>
             </div>
 
-            <div class="item-cards">
-
+            <div class="item-cards item-new">
               <div class="item-buttons">
-                <img class="new-item" src="img/new-flag.png" width="60" height="60" alt="новинка">
                 <img src="img/icon-cart.svg" width="15" height="15" alt="корзина">
                 <button class="button button-buy" type="button">Купить</button>
                 <button class="button button-to-bookmark" type="button">в закладки</button>
@@ -322,7 +323,6 @@
               <img class="servises-img" src="img/credit.png" width="465" height="285" alt="кредит">
               </div>
           </div>
-          </div>
         </section>
 
         <section class="company wrapper">
@@ -410,20 +410,20 @@
     </footer>
 
 <!-- Попап -->
-        <section class="popup-map">
+        <section class="modal modal-map">
           <h2 class="visually-hidden">Заблудились? Напишите нам!</h2>
           <img src="img/map.png" width="940" height="450" alt="адрес компании по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
           <form  class="login-form" action="https://echo.htmlacademy.ru" method="post">
             <p>
-              <label for="user-name">Ваша имя:</label>
+              <label class="visually-hidden" for="user-name">Ваша имя:</label>
               <input class="icon-user" id="user-name" type="text" name="text" placeholder="Имя Фамилия">
             </p>
             <p>
-              <label for="user-email"> Ваш e-mail:</label>
+              <label class="visually-hidden" for="user-email"> Ваш e-mail:</label>
               <input class="icon-mail" id="user-email" type="text" name="password" placeholder="mail@example.ru">
             </p>
             <p>
-              <label for="text-mail">Текст письма:</label>
+              <label class="visually-hidden" for="text-mail">Текст письма:</label>
               <input class="icon-mail" id="text-mail" type="text" name="text" placeholder="В свободной форме">
             </p>
             <button class="button button-red" type="submit">Отправить</button>
