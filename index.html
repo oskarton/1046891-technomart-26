@@ -18,11 +18,10 @@
           </a>
           <form class="search-form" method="get">
             <label class="visually-hidden" for="search">Поиск</label>
-            <img src="img/icon-search.svg" width="17" height="17" alt="Поиск">
             <input class="button-search" id="search" type="text" name="search" placeholder="Поиск:">
           </form>
-          <a class="button button-bookmark" href="#"><img src="img/icon-bookmark.svg" width="14" height="16" alt="флажок закладки"><span>Закладки: 0</span></a>
-          <a class="button button-cart" href="#"><img src="img/icon-cart.svg" width="15" height="15" alt="корзина"><span>Корзина: 0</span></a>
+          <a class="button button-bookmark" href="#"><img src="img/icon-bookmark.svg" width="14" height="16" alt="флажок закладки"><span>Закладки:<span class="number-book">0</span></span></a>
+          <a class="button button-cart" href="#"><img src="img/icon-cart.svg" width="15" height="15" alt="корзина"><span>Корзина:<span class="number-item">0</span></span></a>
           <button class="button button-order" type="submit">Оформить заказ</button>
         </div>
       </div>
@@ -350,7 +349,7 @@
             Вы можете забрать товар сами,<br>
             заехав в наш офис:
             </p>
-            <a href="https://www.google.ru/maps/place/Большая+Конюшенная+ул.,+19,+Санкт-Петербург,+191186/@59.9387969,30.3208946,17z/data=!4m13!1m7!3m6!1s0x4696310fca5ba729:0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!3b1!8m2!3d59.9387942!4d30.3230833!3m4!1s0x4696310fca5ba729:0xea9c53d4493c879f!8m2!3d59.9387942!4d30.3230833"><img src="img/map.png" width="300" height="158" alt="карта"></a>
+            <a class="contacts-button-map" href="#"><img src="img/map.png" width="300" height="158" alt="карта"></a>
             <button class="button button-red button-write-us" type="button">Заблудились? Напишите нам!</button>
           </div>
         </section>
@@ -409,27 +408,51 @@
         </div>
     </footer>
 
-<!-- Попап -->
+<!-- Попап карты и формы связи-->
         <section class="modal modal-map">
-          <h2 class="visually-hidden">Заблудились? Напишите нам!</h2>
-          <img src="img/map.png" width="940" height="450" alt="адрес компании по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-          <form  class="login-form" action="https://echo.htmlacademy.ru" method="post">
-            <p>
-              <label class="visually-hidden" for="user-name">Ваша имя:</label>
-              <input class="icon-user" id="user-name" type="text" name="text" placeholder="Имя Фамилия">
-            </p>
-            <p>
-              <label class="visually-hidden" for="user-email"> Ваш e-mail:</label>
-              <input class="icon-mail" id="user-email" type="text" name="password" placeholder="mail@example.ru">
-            </p>
-            <p>
-              <label class="visually-hidden" for="text-mail">Текст письма:</label>
-              <input class="icon-mail" id="text-mail" type="text" name="text" placeholder="В свободной форме">
-            </p>
-            <button class="button button-red" type="submit">Отправить</button>
-          </form>
-          <button class="class modal-close" type="button">Закрыть</button>
+          <h2 class="visually-hidden">Карта</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123927!2d30.32089461603628!3d59.93879686904801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1570700706109!5m2!1sru!2sru" width="940" height="447" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
         </section>
+
+
+        <section class="modal modal-write-us">
+          <h2 class="visually-hidden">Заблудились? Напишите нам!</h2>
+          <form method="post">
+            <div class="block-for-text">
+              <p>
+                <label for="user-name">Ваша имя:</label>
+                <input class="icon-user" id="user-name" type="text" name="name" placeholder="Имя Фамилия">
+              </p>
+              <p>
+                <label for="user-email"> Ваш e-mail:</label>
+                <input class="icon-mail" id="user-email" type="text" name="mail" placeholder="mail@example.ru">
+              </p>
+            </div>
+            <p>
+              <label for="text-mail">Текст письма:</label>
+              <textarea class="icon-text" id="text-mail" type="text" name="text" placeholder="В свободной форме"></textarea>
+            </p>
+            <div class="button-write">
+              <button class="button button-write-us button-modal-write" type="submit">Отправить</button>
+            </div>
+          </form>
+          <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+        </section>
+
+        <section class="modal popup-in-cart">
+          <div class="modal-check">
+            <img src="img/modal-check.svg">
+            <h3>Товар добавлен в корзину!</h3>
+          </div>
+          <div class="popup-buttons">
+            <button class="button button-cart-red popup-button button-popup-order" type="submit">Оформить заказ</button>
+            <button class="button popup-button button-popup-shop" type="submit">Продолжить покупки</button>
+          </div>
+            <button class="button modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+      </section>
+
+    <script type="text/javascript" src="js/script1.js"></script>
 
 </body>
 </html>

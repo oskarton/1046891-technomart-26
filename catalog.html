@@ -18,11 +18,10 @@
         </a>
         <form class="search-form" method="get">
           <label class="visually-hidden" for="search">Поиск</label>
-          <img src="img/icon-search.svg" width="17" height="17" alt="Поиск">
           <input class="button-search" id="search" type="text" name="search" placeholder="Поиск:">
         </form>
-        <a class="button button-bookmark" href="#"><img src="img/icon-bookmark.svg" width="14" height="16" alt="флажок закладки"><span>Закладки: 0</span></a>
-        <a class="button button-cart-red" href="#"><img src="img/icon-cart.svg" width="15" height="15" alt="корзина"><span>Корзина: 10</span></a>
+        <a class="button button-bookmark" href="#"><img src="img/icon-bookmark.svg" width="14" height="16" alt="флажок закладки"><span>Закладки:<span class="number-book">0</span></span></a>
+        <a class="button button-cart-red" href="#"><img src="img/icon-cart.svg" width="15" height="15" alt="корзина"><span>Корзина:<span class="number-item">10</span></span></a>
         <button class="button button-order" type="submit">Оформить заказ</button>
       </div>
       </div>
@@ -80,13 +79,13 @@
               <div class="sort-by-chrome">
                 <p>Сортировка:</p>
                 <div class="sort-by-by">
-                  <a class="button sort-by" href="#">по цене</a>
+                  <a class="button sort-by active" href="#">по цене</a>
                   <a class="button sort-by" href="#">по типу</a>
                   <a class="button sort-by" href="#">по функционалу</a>
 
                   <div class="sort-arrows">
-                    <a class="sort-up-down" href="#"><img class="sort-up-down" src="img/icon-up-dir.svg" width="10" height="10" alt="сортировать по возрастанию"></a>
-                    <a class="sort-up-down" href="#"><img class="sort-up-down" src="img/icon-down-dir.svg" width="10" height="10" alt="сортировать по убыванию"></a>
+                    <a class="sort-up-down active" href="#"></a>
+                    <a class="sort-down-up" href="#"></a>
                   </div>
 
                 </div>
@@ -156,7 +155,7 @@
                       </li>
                     </ul>
                   </fieldset>
-                  <button class="button button-show" type="button">Показать</button>
+                  <button class="button button-show" type=" submit">Показать</button>
                 </form>
               </section>
             </div>
@@ -386,7 +385,7 @@
         </div>
     </footer>
       <!-- Попап -->
-      <section class="popup-in-cart">
+      <section class="modal popup-in-cart">
         <div class="modal-check">
           <img src="img/modal-check.svg">
           <h3>Товар добавлен в корзину!</h3>
@@ -397,3 +396,8 @@
         </div>
           <button class="button modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
       </section>
+
+      <script type="text/javascript" src="js/script2.js"></script>
+
+  </body>
+</html>

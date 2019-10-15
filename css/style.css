@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Cuprum', sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
   color: #000;
@@ -68,14 +68,16 @@ input[type="radio"].visually-hidden {
   justify-content: space-between;
 }
 
+.button-search::placeholder {
+  color: #fff;
+  }
+
 /* Логотип */
 .header-logo {
-  width: 220px;
+  width: 246px;
   height: 47px;
   background-color: #ee3643;
   box-shadow: 0 5px 0 0 darkred;
-
-  margin-right: 17px;
 }
 
 .header-logo img {
@@ -96,7 +98,8 @@ input[type="radio"].visually-hidden {
 .button-cart,
 .button-bookmark,
 .button-order,
-.button-cart-red  {
+.button-cart-red,
+.button-bookmark-red  {
   font-size: 17px;
   color: #fff;
   border: 0;
@@ -111,11 +114,13 @@ input[type="radio"].visually-hidden {
   background-color: #293449;
 }
 
-.button-cart-red {
+.button-cart-red,
+.button-bookmark-red  {
   background-color: #ee3643;
   }
 
-.button-cart-red img {
+.button-cart-red img,
+.button-bookmark-red img {
   margin-right: 17px;
   opacity: 0.3;
 }
@@ -127,8 +132,7 @@ input[type="radio"].visually-hidden {
 }
 
 .button-cart img,
-.button-bookmark img,
-.search-form img {
+.button-bookmark img {
   opacity: 0.3;
   position: absolute;
   top: 15px;
@@ -137,8 +141,7 @@ input[type="radio"].visually-hidden {
 
 
 .button-cart:hover img,
-.button-bookmark:hover img,
-.search-form:hover img {
+.button-bookmark:hover img,{
   opacity: 1;
 }
 
@@ -152,16 +155,14 @@ input[type="radio"].visually-hidden {
 .button-search {
   font-size: 17px;
   color: #fff;
-  border: 0;
   vertical-align: middle;
-  width: 250px;
-  margin-left: 30px;
-  height: 42px;
-  background-color: #293449;
-}
 
-.search-form img {
-  left: 475px;
+  width: 232px;
+  height: 42px;
+
+  background-color: #293449;
+  border: none;
+  opacity: 1;
 }
 
 .button-search:active {
@@ -174,6 +175,42 @@ input[type="radio"].visually-hidden {
   border: none;
 }
 
+.search-form input{
+  background-image: url("/Users/olgaovcharova/Study/1046891-technomart-26/img/icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 17px 12px;
+  background-size: 17px 17px;
+  padding-left: 45px;
+  opacity: 0.5;
+}
+.search-form input:hover{
+  background-image: url("/Users/olgaovcharova/Study/1046891-technomart-26/img/icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 17px 12px;
+  background-size: 17px 17px;
+  padding-left: 45px;
+  opacity: 1;
+}
+
+.search-form input:focus{
+  background-color: #fff;
+  color: #000;
+  background-image: url("/Users/olgaovcharova/Study/1046891-technomart-26/img/icon-search.png");
+  background-repeat: no-repeat;
+  background-position: 17px 12px;
+  background-size: 17px 17px;
+  padding-left: 45px;
+}
+
+/* .search-form img {
+  opacity: 0.3;
+  border: solid 1px;
+}
+
+.search-form:active img {
+  background-color: #fff;
+  color:#000;
+} */
 /* кнопка оформить заказ */
 .button-order {
   padding: 0;
@@ -280,7 +317,7 @@ input[type="radio"].visually-hidden {
   content: "";
   width: 20px;
   height: 17px;
-  background-image: url('/Users/olgaovcharova/Study/1046891-technomart-26/img/icon-login.svg');
+  background-image: url("/Users/olgaovcharova/Study/1046891-technomart-26/img/icon-login.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   position: absolute;
@@ -290,7 +327,7 @@ input[type="radio"].visually-hidden {
   margin-right: 14px;
 }
 
-.login-link:hover::before {
+.login-link::before:hover {
    opacity: 1;
 }
 
@@ -313,6 +350,10 @@ input[type="radio"].visually-hidden {
   color: #ee3643;
 }
 
+
+.button-login:hover img{
+  opacity: 1;
+}
 .button-login:active {
   color: #f1f5f7;
 }
@@ -464,17 +505,13 @@ ul.breadcrumb {
 
   text-transform: uppercase;
   font-size: 13px;
-  font-family: 'PTSans', sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
   line-height: 18px;
 }
 
 .breadcrumb a {
   color: #000;
 }
-
-/* .breadcrumb li::after {
-  background-image: url('');
-} */
 
 .text-content {
   background-color: #f2f6f8;
@@ -521,9 +558,6 @@ ul.breadcrumb {
   justify-content: space-between;
 }
 
-/* .promo-little-block:nth-child(2){
-  paddin
-} */
 
 .promo-block p {
   display: flex;
@@ -563,7 +597,7 @@ ul.breadcrumb {
   height: 20px;
 
   padding-top:  9px;
-  padding-bottom: 9px;
+  padding-bottom: 6px;
 
   text-align: center;
 
@@ -572,6 +606,14 @@ ul.breadcrumb {
   margin-bottom: 22px;
 }
 
+.promo-block a:hover {
+  opacity: 0.2;
+}
+
+.promo-block a:active {
+  opacity: 0.3;
+
+}
 
 .new-flag {
   position: absolute;
@@ -654,6 +696,14 @@ ul.breadcrumb {
   align-items: center;
 }
 
+.producer:hover {
+  box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.producer:active {
+  opacity: 0.3;
+  box-shadow: 0px 4px 10px 0 rgba(41, 52, 73, 0.5);
+}
 
 
 /* Сервисы */
@@ -663,7 +713,7 @@ ul.breadcrumb {
 
   font-size: 13px;
   line-height: 24px;
-  font-family: PTSans, sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
 }
 .services h3 {
   padding-top: 68px;
@@ -671,7 +721,7 @@ ul.breadcrumb {
 
 .services h4 {
   text-transform: uppercase;
-  font-family: 'Cuprum', sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 36px;
   line-height: 36px;
   font-weight: lighter;
@@ -735,7 +785,7 @@ ul.breadcrumb {
 }
 
 .button-credit {
-  font-family: 'Cuprum', sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   text-transform: uppercase;
   font-size: 14px;
   min-height: 38px;
@@ -808,13 +858,13 @@ ul.breadcrumb {
 
 
 .slider-item:nth-child(1) {
-  background-image: url('/Users/olgaovcharova/Study/1046891-technomart-26/css/img/slider-image.png');
+  background-image: url("/Users/olgaovcharova/Study/1046891-technomart-26/css/img/slider-image.png");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
 .slider-item:nth-child(2) {
-  background-image: url('/Users/olgaovcharova/Study/1046891-technomart-26/css/img/slide-image.png');
+  background-image: url("/Users/olgaovcharova/Study/1046891-technomart-26/css/img/slide-image.png");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -824,7 +874,7 @@ ul.breadcrumb {
   padding: 14px 45px;
   font-size: 14px;
   line-height: 18px;
-  font-family: 'Cuprum', sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   text-transform: uppercase;
 
   position: relative;
@@ -906,9 +956,12 @@ ul.breadcrumb {
 
   list-style: none;
 }
+
+
+
 /* Фильтры */
 .filters {
-  font-family: PTSans, sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
   text-transform: uppercase;
   width: 940px;
 
@@ -937,11 +990,6 @@ ul.breadcrumb {
   padding-top: 12px;
 }
 
-.sort-arrows {
-  padding-top: 8px;
-}
-
-
 fieldset.filters-by-type {
   padding: 0;
   margin: 0;
@@ -969,11 +1017,8 @@ fieldset.filters-by-type {
 }
 
 .filters-by-type a{
-  display: inline;
-  justify-content: flex-end;
   margin: 0;
   padding-top: 10px;
-  padding-right: 19px;
   font-size: 12px;
 }
 
@@ -1197,7 +1242,7 @@ fieldset.price {
   width: 23px;
   height: 23px;
 
-  background-image: url('/Users/olgaovcharova/Study/1046891-technomart-26/img/checkbox-off.svg');
+  background-image: url("/Users/olgaovcharova/Study/1046891-technomart-26/img/checkbox-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 0.2;
@@ -1213,21 +1258,28 @@ fieldset.price {
   width: 27px;
   height: 23px;
 
-  background-image: url('/Users/olgaovcharova/Study/1046891-technomart-26/img/checkbox-on.svg');
+  background-image: url("/Users/olgaovcharova/Study/1046891-technomart-26/img/checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   z-index: 2;
   opacity: 0.2;
 }
 
-.filter-input:hover + label,
+
+.filter-input + label {
+  opacity: 0.4;
+}
+
+.filter-input:hover + label {
+    opacity: 1;
+}
+
 .filter-input:focus + label {
-  color: #663d15;
+    opacity: 0.4;
 }
 
 .filter-input:disabled + label {
   color: #000000;
-
   opacity: 0.5;
 }
 
@@ -1277,16 +1329,69 @@ fieldset.price {
   justify-content: space-between;
 }
 
+
 .sort-by:hover {
   opacity: 1;
   text-decoration: underline;
   text-decoration-color:  #ee3643;
 }
 
-.sort-by:active {
+.sort-by.active{
   opacity: 1;
   color: #ee3643;
   text-decoration: none;
+}
+
+.sort-arrows {
+  width: 62px;
+}
+
+.sort-arrows a {
+  margin-right: 15px;
+  padding-top: 14px;
+}
+.sort-down-up {
+  width: 11px;
+  height: 10px;
+  background-image: url("/Users/olgaovcharova/Study/1046891-technomart-26/img/icon-down-dir.svg");
+  background-repeat: no-repeat;
+  background-position: 0 14px;
+  opacity: 0.3;
+  display: inline-block;
+}
+
+.sort-up-down {
+  width: 11px;
+  height: 10px;
+  background-image: url("/Users/olgaovcharova/Study/1046891-technomart-26/img/icon-up-dir.svg");
+  background-repeat: no-repeat;
+  background-position: 0 14px;
+  opacity: 0.3;
+  margin-left: 20px;
+
+  display: inline-block;
+}
+
+.sort-up-down:hover {
+  opacity: 1;
+}
+
+.sort-up-down.active{
+  background-image: url("/Users/olgaovcharova/Study/1046891-technomart-26/img/icon-up-dir.png");
+  background-repeat: no-repeat;
+  background-position: 0 14px;
+  opacity: 1;
+}
+
+.sort-down-up:hover {
+  opacity: 1;
+}
+
+.sort-down-up.active{
+  background-image: url("/Users/olgaovcharova/Study/1046891-technomart-26/img/icon-down-dir.png");
+  background-repeat: no-repeat;
+  background-position: 0 14px;
+  opacity: 1;
 }
 
 .button-show {
@@ -1300,22 +1405,6 @@ fieldset.price {
   border: 1px solid #e5e5e5;
   border-radius: 5px;
 }
-
-.sort-up-down {
-  opacity: 0.3;
-/*   padding-left: 10px; */
-}
-
-.sort-up-down:hover {
-  opacity: 1;
-}
-
-.sort-up-down:active{
-  stroke: #ee3643;
-  fill: #ee3643;
-  color: #ee3643;
-}
-
 /* товары */
 .items {
   font-size: 18px;
@@ -1336,15 +1425,6 @@ fieldset.price {
   justify-content: space-between;
 }
 
-/* section.items{
-  padding: 0;
-  margin: 0;
-}
-.item {
-  width: 220px;
-  min-height: 318px;
-  text-align: center;
-} */
 
 .old-price {
   font-size: 17px;
@@ -1356,7 +1436,7 @@ fieldset.price {
 .button-price {
   width: 140px;
   height: 40px;
-  background-image: url('/Users/olgaovcharova/Study/1046891-technomart-26/img/item-button.png');
+  background-image: url("/Users/olgaovcharova/Study/1046891-technomart-26/img/item-button.png");
   background-repeat: no-repeat;
   color: #fff;
   font-size: 17px;
@@ -1474,7 +1554,7 @@ fieldset.price {
   right: 0;
   z-index: 2;
   content: " ";
-  background-image: url('/Users/olgaovcharova/Study/1046891-technomart-26/img/new-flag.png');
+  background-image: url("/Users/olgaovcharova/Study/1046891-technomart-26/img/new-flag.png");
   background-repeat: no-repeat;
   width: 60px;
   height: 60px;
@@ -1493,12 +1573,12 @@ fieldset.price {
 }
 
 .text-perforator p {
-  font-family: PTSans, sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
   text-align: justify;
 }
 
 .heading {
-  font-family: 'Cuprum', sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   text-transform: uppercase;
   font-size: 30px;
   line-height: 30px;
@@ -1537,7 +1617,7 @@ fieldset.price {
 }
 
 .company div.p{
-  font-family: 'PTSans', sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
 }
 
 .about-company {
@@ -1563,6 +1643,7 @@ fieldset.price {
   color: #fff;
   height: 38px;
   margin-bottom: 86px;
+  text-transform: uppercase;
 }
 
 .button-company {
@@ -1691,7 +1772,7 @@ fieldset.price {
 }
 
 .catalog-pages a {
-  font-family:PTSans, sans-serif;
+  font-family: "PTSans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   color: #000;
@@ -1707,9 +1788,10 @@ fieldset.price {
   border-color: #ee3643;
 }
 
-li.active {
+li.active,
+li.active:hover {
   background-color: #ee3643;
-  border:none;
+  border: 1px solid #ee3643;
 }
 
 .active a{
@@ -1870,32 +1952,168 @@ li.active {
   color: #fff;
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+
 .modal {
-  color: #000000;
-
-  background-color: #f8f3f0;
-  background-image: url("img/pattern-light.jpg");
-  background-position: 0 0;
-  background-repeat: repeat;
-
-  position: fixed;
+  display: none;
 }
 
 .modal-map {
-  width: 620px;
-  padding: 50px 80px;
-
-}
-
-.modal-map p{
-  font-family: Cuprum, sans-serif;
-  font-size: 18px;
-  color: #000;
-}
-
-.modal-map img {
+  width: 940px;
+  box-shadow: 0 0 14.7px 1.3px rgba(47, 42, 43, 0.5);
+  position: fixed;
+  top: 50%;
+  left: 50%;
   width: 940px;
   height: 447px;
-  box-shadow: 0 0 14.7px 1.3px rgba(47, 42, 43, 0.5);
+  margin-top: -289px;
+  margin-left: -470px;
+  background-image: url("img/map.png");
+  background-size: 940px 450px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  z-index: 10;
 }
+
+.contacts-button-map {
+  cursor: pointer;
+}
+
+.modal-write-us {
+  display: none;
+  box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 620px;
+  height: 430px;
+  margin-left: -289px;
+  margin-top: -100px;
+
+  background-color: #fff;
+
+  text-align: center;
+
+  border-top: solid 7px #ee3643;
+
+  z-index: 100;
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+.modal-write-us p {
+  font-size: 18px;
+  line-height: 30px;
+  text-align: left;
+}
+
+.modal-write-us p:nth-child(2) {
+  margin-left: 80px;
+  margin-bottom: 17px;
+}
+
+.modal-write-us input,
+.modal-write-us textarea {
+  border-radius: 5px;
+  border: solid 2px #d7dcde;
+  font-family: "PTSans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  padding-left: 16px;
+}
+
+.modal-write-us input:hover,
+.modal-write-us textarea:hover {
+  border: solid 2px #c5c5c5;
+}
+
+
+.modal-write-us input:active,
+.modal-write-us textarea:active {
+  border: solid 2px #ee3643;
+}
+
+
+.icon-user,
+.icon-mail {
+  width: 199px;
+  min-height: 32px;
+}
+
+.modal-write-us textarea{
+  width: 440px;
+  min-height: 97px;
+
+  padding-top: 13px;
+}
+
+.button-write {
+  background-color: #f4f4f4;
+  height: 75px;
+  width: 620px;
+  padding-top: 37px;
+}
+
+.button-modal-write {
+  width: 460px;
+}
+
+.block-for-text {
+  display: flex;
+  justify-content: flex-start;
+  width: 460px;
+  margin-left: 80px;
+  margin-top: 33px;
+}
+
+.block-for-text p:nth-child(2){
+  margin-left: 20px;
+}
+
 
