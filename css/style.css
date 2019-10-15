@@ -1239,35 +1239,34 @@ fieldset.price {
   left: -42px;
   top: 0;
 
-  width: 23px;
-  height: 23px;
-
-  background-image: url("/Users/olgaovcharova/Study/1046891-technomart-26/img/checkbox-off.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  opacity: 0.2;
-}
-
-.filter-input-checkbox:checked + label::after {
-  content: "";
-
-  position: absolute;
-  top: 0px;
-  left: -42px;
-
   width: 27px;
   height: 23px;
 
-  background-image: url("/Users/olgaovcharova/Study/1046891-technomart-26/img/checkbox-on.svg");
+  background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  z-index: 2;
-  opacity: 0.2;
+  opacity: 0.5;
+}
+
+.filter-input-checkbox:hover + label::before {
+  background-image: url("../img/checkbox-off.svg");
+  opacity: 0.7;
+}
+
+.filter-input-checkbox:checked + label::before {
+   background-image: url("../img/checkbox-on.svg");
+   opacity: 0.5;
+}
+
+.filter-input-checkbox:checked:hover + label::before {
+  background-image: url("../img/checkbox-on.svg");
+  opacity: 0.7;
 }
 
 
+
 .filter-input + label {
-  opacity: 0.4;
+  /* opacity: 0.4; */
 }
 
 .filter-input:hover + label {
@@ -1275,7 +1274,7 @@ fieldset.price {
 }
 
 .filter-input:focus + label {
-    opacity: 0.4;
+    /* opacity: 0.4; */
 }
 
 .filter-input:disabled + label {
@@ -1312,6 +1311,67 @@ fieldset.price {
   background-color: #c5c5c5;
 }
 
+.filter-input-radio:hover + label::before {
+  content: "";
+
+  position: absolute;
+  left: -42px;
+  top: -3px;
+
+  width: 22px;
+  height: 22px;
+
+  border: 4px solid #b5b5b5;
+  border-radius: 50%;
+
+}
+
+.filter-input-radio:checked:hover + label::after {
+  content: "";
+
+  position: absolute;
+  top: 5px;
+  left: -34px;
+
+  width: 14px;
+  height: 14px;
+
+  border-radius: 50%;
+
+  background-color: #b5b5b5;
+}
+
+.filter-input-radio:disabled + label::before {
+  content: "";
+
+  position: absolute;
+  left: -42px;
+  top: -3px;
+
+  width: 22px;
+  height: 22px;
+
+  border: 4px solid #b5b5b5;
+  border-radius: 50%;
+  opacity: 0.3;
+
+}
+
+.filter-input-radio:checked:disabled + label::after {
+  content: "";
+
+  position: absolute;
+  top: 5px;
+  left: -34px;
+
+  width: 14px;
+  height: 14px;
+
+  border-radius: 50%;
+
+  background-color: #b5b5b5;
+  opacity: 0.3;
+}
 .filters-by-power legend{
   padding: 0;
   margin-top: 0px;
