@@ -1,6 +1,8 @@
         var cartLink = document.querySelectorAll(".button-buy");
         var bookLink = document.querySelectorAll(".button-to-bookmark");
 
+        var cart = document.querySelector('.button-cart')
+
         var buttonCartLink = document.querySelector(".button-cart-red")
         var buttonBookCart = document.querySelector(".button-bookmark-red")
 
@@ -8,12 +10,13 @@
 
         var cartClose = cartPopup.querySelector(".modal-close");
 
-        for (let link of cartLink) {
-          link.addEventListener("click", function (evt) {
+        for (var i = 0; i<=cartLink.length; i++) {
+          cartLink[i].addEventListener("click", function (evt) {
             evt.preventDefault();
             cartPopup.classList.add("modal-show");
           });
-        }
+        };
+
         cartClose.addEventListener("click", function (evt) {
           evt.preventDefault();
           cartPopup.classList.remove("modal-show");

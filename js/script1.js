@@ -1,4 +1,4 @@
-      var link = document.querySelector(".button-write-us");
+      var Writelink = document.querySelector(".button-write-us");
 
       var popup = document.querySelector(".modal-write-us");
 
@@ -16,7 +16,7 @@
         isStorageSupport = false;
       }
 
-      link.addEventListener("click", function (evt) {
+      Writelink.addEventListener("click", function (evt) {
         evt.preventDefault();
         popup.classList.add("modal-show");
         if (storage) {
@@ -88,12 +88,13 @@
 
         var cartClose = cartPopup.querySelector(".modal-close");
 
-        for (let link of cartLink) {
-          link.addEventListener("click", function (evt) {
+        for (var i = 0; i<=cartLink.length; i++) {
+          cartLink[i].addEventListener("click", function (evt) {
             evt.preventDefault();
             cartPopup.classList.add("modal-show");
           });
-        }
+        };
+
         cartClose.addEventListener("click", function (evt) {
           evt.preventDefault();
           cartPopup.classList.remove("modal-show");

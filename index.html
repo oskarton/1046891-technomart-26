@@ -20,8 +20,8 @@
             <label class="visually-hidden" for="search">Поиск</label>
             <input class="button-search" id="search" type="text" name="search" placeholder="Поиск:">
           </form>
-          <a class="button button-bookmark" href="#"><img src="img/icon-bookmark.svg" width="14" height="16" alt="флажок закладки"><span>Закладки:<span class="number-book">0</span></span></a>
-          <a class="button button-cart" href="#"><img src="img/icon-cart.svg" width="15" height="15" alt="корзина"><span>Корзина:<span class="number-item">0</span></span></a>
+          <a class="button button-bookmark" href="#"><img src="img/icon-bookmark.svg" width="14" height="16" alt="флажок закладки"><span>Закладки: 0</span></a>
+          <a class="button button-cart" href="#"><img src="img/icon-cart.svg" width="15" height="15" alt="корзина"><span>Корзина: 0</span></a>
           <button class="button button-order" type="submit">Оформить заказ</button>
         </div>
       </div>
@@ -31,7 +31,7 @@
             и инструментов для ремонта</p>
           <div class="tel-address">
             <p>
-              <span class="tel-company"><img src="img/icon-phone.svg" width="20" height="20" alt="телефон">+7 (812) 555-05-55</span>
+              <a href="tel:+78125550555" class="tel-company"><img src="img/icon-phone.svg" width="20" height="20" alt="телефон">+7 (812) 555-05-55</a>
               <span class="address-company">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
             </p>
           </div>
@@ -92,13 +92,11 @@
                   <p class="uppercase">Дрели</p>
                   <p>соседям на радость!</p>
                   <a class="button button-red button-open-catalog" href="catalog.html">открыть каталог</a>
-                  <img src="img/slider-image.png" width="620" height="265" alt="дрели">
                 </li>
                 <li class="slider-item">
                   <p class="uppercase">Перфораторы</p>
                   <p>Настояшие мужские игрушки</p>
                   <a class="button button-red button-open-catalog" href="catalog.html">открыть каталог</a>
-                  <img src="img/slide-image.png" width="620" height="265" alt="перфораторы">
                 </li>
               </ul>
                 <div class="slider-controls">
@@ -350,7 +348,7 @@
             заехав в наш офис:
             </p>
             <a class="contacts-button-map" href="#"><img src="img/map.png" width="300" height="158" alt="карта"></a>
-            <button class="button button-red button-write-us" type="button">Заблудились? Напишите нам!</button>
+            <a href="writeus.html" class="button button-write-us">Заблудились? Напишите нам!</a>
           </div>
         </section>
     </main>
@@ -431,7 +429,7 @@
             </div>
             <p>
               <label for="text-mail">Текст письма:</label>
-              <textarea class="icon-text" id="text-mail" type="text" name="text" placeholder="В свободной форме"></textarea>
+              <textarea class="icon-text" id="text-mail" name="text" placeholder="В свободной форме"></textarea>
             </p>
             <div class="button-write">
               <button class="button button-write-us button-modal-write" type="submit">Отправить</button>
@@ -442,7 +440,7 @@
 
         <section class="modal popup-in-cart">
           <div class="modal-check">
-            <img src="img/modal-check.svg">
+            <img src="img/modal-check.svg" width="66" height="66" alt="галочка">
             <h3>Товар добавлен в корзину!</h3>
           </div>
           <div class="popup-buttons">
@@ -452,7 +450,7 @@
             <button class="button modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
       </section>
 
-    <script type="text/javascript" src="js/script1.js"></script>
+    <script type="text/javascript" src="js/script_1_1.js"></script>
 
 </body>
 </html>
